@@ -40,9 +40,6 @@ public class SpellCaster : MonoBehaviour
 			
 		if (spellTimer > 0 && spellTimer < spellDelay1)
 			spellTimer += Time.fixedDeltaTime;
-		
-		//if (spellTimer >= 0)
-			//spellTimer -= Time.fixedDeltaTime;
 		else
 			spellTimer = 0;
 	}
