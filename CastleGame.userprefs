@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpellCaster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyAI.cs">
     <Files>
-      <File FileName="Assets\Scripts\SpawnerScript.cs" Line="27" Column="54" />
+      <File FileName="Assets\Scripts\EnemyAI.cs" Line="19" Column="67" />
+      <File FileName="Assets\Scripts\SpawnerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SpawnerPoint.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyAI.cs" Line="32" Column="31" />
       <File FileName="Assets\Scripts\SpellCaster.cs" Line="58" Column="30" />
       <File FileName="Assets\Scripts\PlayerStats.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Stats.cs" Line="28" Column="4" />
+      <File FileName="Assets\Scripts\Stats.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
