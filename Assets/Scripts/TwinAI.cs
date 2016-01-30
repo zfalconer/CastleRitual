@@ -1,22 +1,25 @@
-﻿using UnityEngine;
+﻿/*
+ *purpose: This is the ai code for the twin 
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class TwinAI : MonoBehaviour 
 {
-	//all possible mana orb points
+	//all of the points of interest on the map
 	private GameObject[] points;
 	private WeightedMap map;
 
 	private GameObject target;
-	private GameObject manaOrb;
 	private Vector3 homePosition;
 
 	private bool isReturn = false;
 	// Use this for initialization
 	void Start () 
 	{
-		//finds the tags of all of the orbs
-		points = GameObject.FindGameObjectsWithTag ("Orb");
+		//finds the tags of all the items
+		points = GameObject.FindGameObjectsWithTag ("Item");
 		map = new WeightedMap (points);
 		homePosition = this.transform.position;
 	}
@@ -29,23 +32,28 @@ public class TwinAI : MonoBehaviour
 			target = map.PopHeighestWeight ();
 		else if (!isReturn)
 		{
-			//find the mana orb
+			//find the item
 			this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 
-			//if we are near the mana orb then we get it
+			//if we are near the item get it
 			if (Vector3.Distance (this.transform.position, target.transform.position) < 3)
 			{
-				manaOrb = target;
-				target = null;
-				isReturn = true;
+				DestroyObject (target.transform.root.gameObject);
 			}
 		}
 
+		//if is return is active go to the summonigng well
 		if (isReturn) 
 		{
 			this.GetComponent <NavMeshAgent> ().destination = homePosition;
 			if (Vector3.Distance (this.transform.position, homePosition) < 3)
 				isReturn = false;
 		}
+
+		//sets the rule for when the ai should return back to its summoning well
+		if (this.GetComponent <Stats> ().mana < (this.GetComponent <Stats> ().maxMana / 2))
+			isReturn = true;
+		else
+			isReturn = false;
 	}
 }
