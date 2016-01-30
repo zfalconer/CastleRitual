@@ -38,14 +38,14 @@ public class SpellCaster : MonoBehaviour
 		}
 
 		if (spellTimer >= 0)
-			spellTimer += Time.fixedDeltaTime;
+			spellTimer -= Time.fixedDeltaTime;
 		else
 			spellTimer = 0;
 	}
 
 	private void Spell1 ()
 	{
-		this.GetComponent <Stats> ().SpellCast (100f);
+		gameObject.GetComponent <Stats> ().SpellCast (100f);
         GameObject bulletClone = (GameObject)Instantiate(bolt1, barrel.transform.position, barrel.transform.rotation);
         bulletClone.GetComponent<Rigidbody>().velocity = barrel.transform.forward * speed;
         Debug.Log ("spell 1");
@@ -55,7 +55,7 @@ public class SpellCaster : MonoBehaviour
 
     private void Spell2 ()
 	{
-		this.GetComponent <Stats> ().SpellCast (100f);
+	    gameObject.GetComponent <Stats> ().SpellCast (100f);
         GameObject bulletClone = (GameObject)Instantiate(bolt1, barrel.transform.position, barrel.transform.rotation);
         bulletClone.GetComponent<Rigidbody>().velocity = barrel.transform.forward * speed;
         Debug.Log ("Spell 2");
