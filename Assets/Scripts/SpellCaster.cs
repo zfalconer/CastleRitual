@@ -29,6 +29,7 @@ public class SpellCaster : MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.Mouse0) && spellTimer == 0) 
 		{
+			Debug.Log ("Called");
 			Spell1 ();
 		}
 
@@ -36,9 +37,12 @@ public class SpellCaster : MonoBehaviour
 		{
 			Spell2 ();
 		}
-
-		if (spellTimer >= 0)
-			spellTimer -= Time.fixedDeltaTime;
+			
+		if (spellTimer > 0 && spellTimer < spellDelay1)
+			spellTimer += Time.fixedDeltaTime;
+		
+		//if (spellTimer >= 0)
+			//spellTimer -= Time.fixedDeltaTime;
 		else
 			spellTimer = 0;
 	}
