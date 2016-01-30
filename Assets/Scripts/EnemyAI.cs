@@ -8,13 +8,23 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour 
 {
 	public string targetTag;
+	public float loiterMax;
+	public float trackingMax;
 
 	private GameObject target;
+
+	private bool isLoitering;
+	private bool isTracking;
+
+	private float loiterTime;
+	private float trackingTime;
 
 	// Use this for initialization
 	void Awake () 
 	{
 		target = GameObject.FindGameObjectWithTag (targetTag);
+		loiterTime = 0;
+		trackingTime = 0;
 
 		//if it can't find the tag then it should just target the player
 		if (target == null)
