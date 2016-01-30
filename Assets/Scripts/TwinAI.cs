@@ -19,9 +19,10 @@ public class TwinAI : MonoBehaviour
 
 	private bool isReturn = false;
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		//finds the tags of all the items
+		Debug.Log (itemTag);
 		points = GameObject.FindGameObjectsWithTag (itemTag);
 		map = new WeightedMap (points);
 		homePosition = this.transform.position;
