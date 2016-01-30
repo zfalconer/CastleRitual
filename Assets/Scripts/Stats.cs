@@ -26,7 +26,6 @@ public class Stats : MonoBehaviour {
 		if (stamina > maxStamina) {
 			stamina = maxStamina;
 		}
-		mana += manaRegen * Time.deltaTime;
 		SpellCast (0f);
 		if (mana > maxMana) {
 			mana = maxMana;

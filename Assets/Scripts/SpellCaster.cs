@@ -44,9 +44,10 @@ public class SpellCaster : MonoBehaviour
 			spellTimer = 0;
 	}
 
+	//this is for the light bolt
 	private void Spell1 ()
 	{
-		gameObject.GetComponent <Stats> ().SpellCast (100f);
+		gameObject.GetComponent <Stats> ().SpellCast (20);
         GameObject bulletClone = (GameObject)Instantiate(bolt1, barrel.transform.position, barrel.transform.rotation);
         bulletClone.GetComponent<Rigidbody>().velocity = barrel.transform.forward * speed;
         Debug.Log ("spell 1");
@@ -54,9 +55,10 @@ public class SpellCaster : MonoBehaviour
 
     }
 
+	//this is for the heavy bolt
     private void Spell2 ()
 	{
-	    gameObject.GetComponent <Stats> ().SpellCast (100f);
+	    gameObject.GetComponent <Stats> ().SpellCast (35);
         GameObject bulletClone = (GameObject)Instantiate(bolt1, barrel.transform.position, barrel.transform.rotation);
         bulletClone.GetComponent<Rigidbody>().velocity = barrel.transform.forward * speed;
         Debug.Log ("Spell 2");
