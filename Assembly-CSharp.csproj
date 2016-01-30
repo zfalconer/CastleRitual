@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
      <Compile Include="Assets\Scripts\Firing.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\SpawnerPoint.cs" />
+     <Compile Include="Assets\Scripts\SpawnerScript.cs" />
      <Compile Include="Assets\Scripts\SpellCaster.cs" />
      <Compile Include="Assets\Scripts\Stats.cs" />
      <Compile Include="Assets\Scripts\SummoningWell.cs" />
