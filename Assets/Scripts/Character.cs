@@ -13,7 +13,6 @@ public class Character : MonoBehaviour {
 	protected Vector3 cameraRotation;
 	public float jumpSpeed = 10f;
 	public float gravity = 9.8f;
-	public Firing weapon;
 	protected bool isSprinting = false;
 	// Use this for initialization
 	void Start () {
@@ -23,7 +22,6 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Movement ();
-		weapon.Attacking (Input.GetAxis("Strike") > 0);
 	}
 	private void Movement(){
 		//sprint
