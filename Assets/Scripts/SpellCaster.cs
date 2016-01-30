@@ -29,7 +29,6 @@ public class SpellCaster : MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.Mouse0) && spellTimer == 0) 
 		{
-			Debug.Log ("Called");
 			Spell1 ();
 		}
 
@@ -47,22 +46,30 @@ public class SpellCaster : MonoBehaviour
 	//this is for the light bolt
 	private void Spell1 ()
 	{
-		gameObject.GetComponent <Stats> ().SpellCast (20);
-        GameObject bulletClone = (GameObject)Instantiate(bolt1, barrel.transform.position, barrel.transform.rotation);
-        bulletClone.GetComponent<Rigidbody>().velocity = barrel.transform.forward * speed;
-        Debug.Log ("spell 1");
-        spellTimer += spellDelay1;
+		Stats stats = this.GetComponent <Stats> ();
+		if (stats.mana >= 20) 
+		{
+			stats.SpellCast (20);
+			GameObject bulletClone = (GameObject)Instantiate (bolt1, barrel.transform.position, barrel.transform.rotation);
+			bulletClone.GetComponent<Rigidbody> ().velocity = barrel.transform.forward * speed;
+			Debug.Log ("spell 1");
+			spellTimer += spellDelay1;
+		}
 
     }
 
 	//this is for the heavy bolt
     private void Spell2 ()
 	{
-	    gameObject.GetComponent <Stats> ().SpellCast (35);
-        GameObject bulletClone = (GameObject)Instantiate(bolt1, barrel.transform.position, barrel.transform.rotation);
-        bulletClone.GetComponent<Rigidbody>().velocity = barrel.transform.forward * speed;
-        Debug.Log ("Spell 2");
-        spellTimer += spellDelay2;
+		Stats stats = this.GetComponent <Stats> ();
+		if (stats.mana >= 35) 
+		{
+			gameObject.GetComponent <Stats> ().SpellCast (35);
+			GameObject bulletClone = (GameObject)Instantiate (bolt1, barrel.transform.position, barrel.transform.rotation);
+			bulletClone.GetComponent<Rigidbody> ().velocity = barrel.transform.forward * speed;
+			Debug.Log ("Spell 2");
+			spellTimer += spellDelay2;
+		}
 
     }
 }

@@ -11,26 +11,36 @@ public class SummoningWell : MonoBehaviour
 
 	public enum MonsterType 
 	{
-		Light, Dark
+		Good, Evil
 	}
 
 	public MonsterType type;
 
-	private float mana;
-	// Use this for initialization
-	void Start () 
-	{
-		mana = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if (mana > 100);
-			//spawnstuff
-	}
-
 	void OnTriggerEnter (Collider collider)
 	{
+		switch (type)
+		{
+			case MonsterType.Good:
+			{
+				if (collider.transform.root.tag != "Evil")
+					FillMana (collider);
+				break;
+			}
+
+			case MonsterType.Evil:
+			{
+				if (collider.transform.root.tag != "Good")
+					FillMana (collider);
+				break;
+			}
+
+		}
+	}
+	
+	private void FillMana (Collider collider)
+	{
+		//heals a persons mana if they are in the area
+		if (collider.transform.root.GetComponent <PlayerStats> () != null)
+			collider.transform.root.GetComponent <PlayerStats> ().SpellCast (-100f);
 	}
 }

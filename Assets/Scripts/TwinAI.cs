@@ -64,5 +64,7 @@ public class TwinAI : MonoBehaviour
 			isReturn = true;
 		else
 			isReturn = false;
+
+
 	}
 }
