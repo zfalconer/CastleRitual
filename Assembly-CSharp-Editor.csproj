@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
-    <ProjectGuid>{996D450A-1962-F3C4-44D9-88C923308DCB}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectGuid>{20375093-D755-ADBC-8DF7-6B36ABDA4DF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -45,53 +46,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water\Water4\Shaders\FXWater4Simple.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water\Water4\Shaders\WaterInclude.cginc" />
-     <None Include="Assets\Standard Assets\Environment\Water\Water\Water4\Shaders\FXWater4Advanced.shader" />
-     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
- <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.EditorTestsRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TreeEditor">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Water4\Shaders\FXWater4Simple.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.EditorTestsRunner">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+<<<<<<< HEAD
+      <Project>{C59E18D2-028F-F882-C3C4-6FCEBCAF09C9}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+=======
       <Project>{C59E18D2-028F-F882-C3C4-6FCEBCAF09C9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{1168B52F-AC50-7B4D-2021-EE37DD6BED01}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+>>>>>>> 70e3579e1e0657e8ac321d3b3c9476134a6129dc
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -101,5 +108,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
