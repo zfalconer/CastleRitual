@@ -8,6 +8,7 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour 
 {
 	public string targetTag;
+
 	private GameObject target;
 
 	// Use this for initialization
