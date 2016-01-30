@@ -7,12 +7,13 @@ using System.Collections;
 
 public class EnemyAI : MonoBehaviour 
 {
+	public string targetTag;
 	private GameObject target;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
-		target = GameObject.FindGameObjectWithTag ("Player");
+		target = GameObject.FindGameObjectWithTag (targetTag);
 	}
 
 	// Update is called once per frame
