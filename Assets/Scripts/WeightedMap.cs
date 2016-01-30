@@ -39,7 +39,10 @@ public class WeightedMap
 				
 		}
 
-		weights [index] = 0;
+		if (max == -1)
+			return null;
+
+		weights [index] = -1;
 		return transforms[index];
 	}
 	

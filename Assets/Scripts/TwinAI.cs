@@ -32,8 +32,13 @@ public class TwinAI : MonoBehaviour
 	void Update () 
 	{
 		//if there is no target get one 
-		if (!isReturn && target == null)
+		if (!isReturn && target == null) 
+		{
 			target = map.PopHeighestWeight ();
+
+			if (target == null)
+				isReturn = true;
+		}
 		else if (!isReturn)
 		{
 			//find the item

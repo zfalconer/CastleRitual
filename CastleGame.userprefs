@@ -1,15 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpellCaster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TwinAI.cs">
     <Files>
-      <File FileName="Assets\Scripts\SpellCaster.cs" Line="41" Column="49" />
-      <File FileName="Assets\Scripts\SpawnerPoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TwinAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SummoningWell.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerStats.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WeightedMap.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TwinAI.cs" Line="40" Column="21" />
+      <File FileName="Assets\Scripts\Weapon.cs" Line="21" Column="48" />
+      <File FileName="Assets\Scripts\WeightedMap.cs" Line="43" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
 
 	public void Kill ()
 	{
-		Debug.Log ("Get Rekt");
+		Destroy (target.gameObject);
 	}
 		
 }
