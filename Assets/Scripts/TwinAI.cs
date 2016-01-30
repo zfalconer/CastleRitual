@@ -7,6 +7,9 @@ using System.Collections;
 
 public class TwinAI : MonoBehaviour 
 {
+	//tag that the items to find will have
+	public string itemTag;
+
 	//all of the points of interest on the map
 	private GameObject[] points;
 	private WeightedMap map;
@@ -19,7 +22,7 @@ public class TwinAI : MonoBehaviour
 	void Start () 
 	{
 		//finds the tags of all the items
-		points = GameObject.FindGameObjectsWithTag ("Item");
+		points = GameObject.FindGameObjectsWithTag (itemTag);
 		map = new WeightedMap (points);
 		homePosition = this.transform.position;
 	}
