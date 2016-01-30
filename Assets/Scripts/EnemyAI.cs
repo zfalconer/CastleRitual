@@ -15,6 +15,10 @@ public class EnemyAI : MonoBehaviour
 	void Awake () 
 	{
 		target = GameObject.FindGameObjectWithTag (targetTag);
+
+		//if it can't find the tag then it should just target the player
+		if (target == null)
+			target = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	// Update is called once per frame
