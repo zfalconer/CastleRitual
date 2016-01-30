@@ -14,6 +14,7 @@ public class Character : MonoBehaviour {
 	public float jumpSpeed = 10f;
 	public float gravity = 9.8f;
 	protected bool isSprinting = false;
+    public float runCost = 1.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -22,6 +23,10 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Movement ();
+        if (isSprinting)
+        {
+            gameObject.GetComponent<Stats>().StaminaUse(runCost);
+        }
 	}
 	private void Movement(){
 		//sprint
