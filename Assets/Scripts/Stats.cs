@@ -12,6 +12,7 @@ public class Stats : MonoBehaviour {
 	public float manaRegen = 5f;
 	public float maxMana = 100f;
 	public GameObject Character;
+    public string spawnerContainer;
 
 	// Use this for initialization
 	void Start () {
@@ -56,4 +57,10 @@ public class Stats : MonoBehaviour {
 	public virtual void StaminaUse(float fatigue){
 		stamina -= fatigue;
 	}
+
+    public virtual void Death()
+    {
+        GameObject[] spawners = GameObject.FindGameObjectsWithTag(spawnerContainer);
+        spawners[1].GetComponent<SpawnerScript>().spawned = false;
+    }
 }
