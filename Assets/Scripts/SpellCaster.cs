@@ -8,7 +8,7 @@ using System.Collections;
 
 public class SpellCaster : MonoBehaviour 
 {
-	public float spellDelay;
+	public float spellDelay = 1f;
 
 	private float spellTimer;
 
@@ -24,13 +24,13 @@ public class SpellCaster : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Mouse0) && spellTimer == 0) 
 		{
 			Spell1 ();
-			spellTimer++;
+			spellTimer += spellDelay;
 		}
 
 		if (Input.GetKeyDown (KeyCode.Mouse1) && spellTimer == 0) 
 		{
 			Spell2 ();
-			spellTimer++;
+			spellTimer += spellDelay;
 		}
 
 		if (spellTimer >= 1 && spellTimer < spellDelay)
