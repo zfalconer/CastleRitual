@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyStats : Stats {
+public class EnemyStats : Stats
+{
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 	
 	}
 	
 	// Update is called once per frame
-	protected override void FixedUpdate () {
+	protected override void FixedUpdate () 
+	{
 		base.FixedUpdate ();
+
+		if (health <= maxHealth)
+			health += 100f;
 	}
 
 	public override void Damage(float damage){

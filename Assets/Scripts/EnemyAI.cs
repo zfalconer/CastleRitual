@@ -25,16 +25,15 @@ public class EnemyAI : MonoBehaviour
 		target = GameObject.FindGameObjectWithTag (targetTag);
 		loiterTime = 0;
 		trackingTime = 0;
-
-		//if it can't find the tag then it should just target the player
-		if (target == null)
-			target = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		if (target != null) 
+		//if it can't find the tag then it should just target the player
+		if (target == null)
+			target = GameObject.FindGameObjectWithTag ("Player");
+		else if (target != null) 
 		{
 			this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 
