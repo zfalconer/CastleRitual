@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Mom 1_data" version="1.3.0" audacityversion="2.1.0" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="79.4539292172" rate="44100.0" snapto="off" selectionformat="seconds">
+	<tags/>
+	<wavetrack name="Audio Track" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="482328">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000a2f.au" len="179737" min="-0.155241" max="0.17186" rms="0.016314"/>
+				</waveblock>
+				<waveblock start="179737">
+					<simpleblockfile filename="e0000460.au" len="151295" min="-0.215756" max="0.166881" rms="0.013578"/>
+				</waveblock>
+				<waveblock start="331032">
+					<simpleblockfile filename="e0000ff5.au" len="151296" min="-0.27638" max="0.202015" rms="0.01845"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Audio Track" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="482328">
+				<waveblock start="0">
+					<simpleblockfile filename="e000078b.au" len="179737" min="-0.153334" max="0.170363" rms="0.015958"/>
+				</waveblock>
+				<waveblock start="179737">
+					<simpleblockfile filename="e0000f95.au" len="151295" min="-0.214018" max="0.167187" rms="0.013429"/>
+				</waveblock>
+				<waveblock start="331032">
+					<simpleblockfile filename="e0000b6f.au" len="151296" min="-0.271677" max="0.199143" rms="0.018323"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
