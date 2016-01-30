@@ -23,6 +23,10 @@ public class SpawnerScript : MonoBehaviour
         {
             Spawn();
         }
+
+		//if there is no object that was spawned respawn it
+		if (!GameObject.Find (spawningItem.name + "(Clone)"))
+			spawned = false;
     }
 
     void Spawn()
