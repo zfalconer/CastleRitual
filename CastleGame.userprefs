@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Weapon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TwinAI.cs">
     <Files>
+      <File FileName="Assets\Scripts\TwinAI.cs" Line="40" Column="21" />
       <File FileName="Assets\Scripts\Weapon.cs" Line="21" Column="48" />
+      <File FileName="Assets\Scripts\WeightedMap.cs" Line="43" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
