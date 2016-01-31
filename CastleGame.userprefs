@@ -1,6 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyAI.cs">
+    <Files>
+      <File FileName="Assets\Scripts\SpellCaster.cs" Line="67" Column="5" />
+      <File FileName="Assets\Scripts\EnemyAI.cs" Line="36" Column="5" />
+      <File FileName="Assets\Scripts\TwinAI.cs" Line="72" Column="55" />
+      <File FileName="Assets\Scripts\WeightedMap.cs" Line="31" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

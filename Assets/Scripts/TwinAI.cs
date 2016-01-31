@@ -65,6 +65,12 @@ public class TwinAI : MonoBehaviour
 		else
 			isReturn = false;
 
+		//if we are close to the player then 
+		if (Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position) < 6)
+			this.GetComponent <SpellCaster> ().enabled = true;
+		else
+			this.GetComponent <SpellCaster> ().enabled = false;
+
 
 	}
 }
