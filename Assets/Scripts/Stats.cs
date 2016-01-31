@@ -57,9 +57,15 @@ public class Stats : MonoBehaviour {
 		stamina -= fatigue;
 	}
 
+<<<<<<< HEAD
     public virtual void Death()
     {
         GameObject[] spawners = GameObject.FindGameObjectsWithTag(spawnerContainer);
         spawners[1].GetComponent<SpawnerScript>().spawned = false;
+=======
+    public void Death()
+    {
+
+>>>>>>> 48c6847797a9c0053e9a1c658cdd9ed1505b505b
     }
 }
