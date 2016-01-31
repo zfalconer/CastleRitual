@@ -339,11 +339,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448532}
-  - 95: {fileID: 9543590}
   - 54: {fileID: 5480154}
   - 114: {fileID: 11436680}
   - 195: {fileID: 19557174}
   - 82: {fileID: 8237508}
+  - 111: {fileID: 11133932}
   m_Layer: 0
   m_Name: Demon
   m_TagString: Untagged
@@ -1963,7 +1963,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0667230148d40945af3819e4b7432cd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.275
+  m_Volume: 0.845
   m_Pitch: 0.52
   Loop: 1
   Mute: 0
@@ -1971,7 +1971,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1997,7 +1997,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2026,23 +2026,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &9543590
-Animator:
-  serializedVersion: 3
+--- !u!111 &11133932
+Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139446}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ee9b378f96f57354db9d70840d5ad05c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 7515749f74a229d4ea6167dca5886905, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400004, guid: ee9b378f96f57354db9d70840d5ad05c, type: 3}
+  m_Animations:
+  - {fileID: 7400004, guid: ee9b378f96f57354db9d70840d5ad05c, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11436680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2055,6 +2053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Good
+  animName: Walk
   cycleMax: 0
 --- !u!137 &13755316
 SkinnedMeshRenderer:
@@ -2168,6 +2167,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: 0.4
       objectReference: {fileID: 0}
@@ -2193,7 +2196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Volume
-      value: 0.275
+      value: 0.845
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_audioClip
@@ -2215,6 +2218,22 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7515749f74a229d4ea6167dca5886905, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400004, guid: ee9b378f96f57354db9d70840d5ad05c, type: 3}
+    - target: {fileID: 0}
+      propertyPath: animName
+      value: Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139446}

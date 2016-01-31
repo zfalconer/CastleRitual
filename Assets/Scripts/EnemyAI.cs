@@ -8,6 +8,7 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour 
 {
 	public string targetTag;
+	public string animName;
 	public float cycleMax;
 
 	private GameObject target;
@@ -51,7 +52,7 @@ public class EnemyAI : MonoBehaviour
 		{
 			if (cycleTime <= (cycleMax * .45f)) 
 			{
-				this.GetComponent <Animator> ().SetTrigger ("Walking");
+				this.GetComponent <Animation> ().Play (animName);
 				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 			}
 
@@ -61,7 +62,7 @@ public class EnemyAI : MonoBehaviour
 
 		if (target != null) 
 		{
-			if (Vector3.Distance (this.transform.position, target.transform.position) < 5)
+			if (Vector3.Distance (this.transform.position, target.transform.position) < 3)
 				Kill ();
 		}
 	}

@@ -703,7 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners: []
   spawnerTag: GoodMonsterSpawn
-  spawningItem: {fileID: 171668, guid: 255ef5f1f0814654a9a6bd59b29429ea, type: 2}
+  spawningItem: {fileID: 181666, guid: 255ef5f1f0814654a9a6bd59b29429ea, type: 2}
   spawned: 0
   spawnTime: 1.5
   timeLeft: 0
