@@ -14,6 +14,7 @@ public class Stats : MonoBehaviour {
 	public GameObject Character;
     public string spawnerContainer;
     public GameObject[] items = new GameObject[3] { null, null, null };
+    public string alignment;
 
 	// Use this for initialization
 	void Start () {
@@ -65,7 +66,7 @@ public class Stats : MonoBehaviour {
         {
             if(items[num] != null)
             {
-                GameObject[] itemSpawnerMessage = GameObject.FindGameObjectsWithTag(items[num].spawnerContainer);
+                GameObject[] itemSpawnerMessage = GameObject.FindGameObjectsWithTag(items[num].GetComponent<Item>().spawnerContainer);
                 itemSpawnerMessage[0].GetComponent<SpawnerScript>().spawned = false;
                 items[num] = null;
             }
