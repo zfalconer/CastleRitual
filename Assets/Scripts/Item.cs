@@ -18,7 +18,7 @@ public class Item : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.GetComponent<Stats>().alignment == gameObject.tag)
+		if((col.gameObject.GetComponent<Stats>().alignment + "Item") == gameObject.tag)
         {
             PickUp(col.gameObject, gameObject);
         }
