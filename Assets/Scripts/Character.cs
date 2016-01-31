@@ -6,7 +6,7 @@ public class Character : MonoBehaviour {
 	public CharacterController character;
 	public Camera view;
 	protected Vector3 moveDirection;
-	public float speed = 10f;
+	public float speed = 15f;
 	public float sprintSpeed = 7.5f;
 	public float cameraXSensitivity = 10f;
 	public float cameraYSensitivity = 10f;
@@ -46,7 +46,7 @@ public class Character : MonoBehaviour {
 			moveDirection = new Vector3(Input.GetAxis("Right"), 0, Input.GetAxis("Forward"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= speed;
-            current.Play();
+			current.Play ();
 			//jump
 			if (Input.GetButton("Jump")){
 				moveDirection.y = jumpSpeed;
