@@ -15,6 +15,7 @@ public class Character : MonoBehaviour {
 	public float gravity = 9.8f;
 	protected bool isSprinting = false;
     public float runCost = 1.0f;
+    public AudioSource walking, running, current;
 	// Use this for initialization
 	void Start () {
 	
@@ -31,11 +32,13 @@ public class Character : MonoBehaviour {
 	private void Movement(){
 		//sprint
 		if (Input.GetKeyDown (KeyCode.LeftShift) && Input.GetAxis("Forward") > 0 && !isSprinting) {
+            current = running;
 			speed += sprintSpeed;
 			isSprinting = true;
 		}
 		if (Input.GetKeyUp (KeyCode.LeftShift) && isSprinting || Input.GetAxis ("Forward") <= 0 && isSprinting) {
 			speed -= sprintSpeed;
+            current = walking;
 			isSprinting = false;
 		}
 		//movement
@@ -43,6 +46,7 @@ public class Character : MonoBehaviour {
 			moveDirection = new Vector3(Input.GetAxis("Right"), 0, Input.GetAxis("Forward"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= speed;
+            current.Play();
 			//jump
 			if (Input.GetButton("Jump")){
 				moveDirection.y = jumpSpeed;

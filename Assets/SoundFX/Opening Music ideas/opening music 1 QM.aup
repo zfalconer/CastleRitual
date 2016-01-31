@@ -1,0 +1,91 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="opening music 1 QM_data" version="1.3.0" audacityversion="2.1.0" sel0="0.0000000000" sel1="82.8720000000" vpos="0" h="0.0000000000" zoom="7.2642146925" rate="32000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags>
+		<tag name="GENRE" value="Instrumental"/>
+		<tag name="ARTIST" value="Purple Planet Music"/>
+		<tag name="Composer" value="Chris Martyn/Geoff Harvey"/>
+		<tag name="YEAR" value="2012"/>
+		<tag name="COMMENTS" value="© Purple Planet Music"/>
+	</tags>
+	<wavetrack name="Lost Souls" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="32000" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2651904">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000ec8.au" len="262144" min="-0.092722" max="0.10033" rms="0.017847"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e00006c5.au" len="262144" min="-0.143534" max="0.153281" rms="0.032296"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000e27.au" len="262144" min="-0.280882" max="0.258117" rms="0.067469"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0000495.au" len="262144" min="-0.344675" max="0.352995" rms="0.06791"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000b75.au" len="262144" min="-0.34553" max="0.349699" rms="0.078305"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0000bcc.au" len="262144" min="-0.379755" max="0.398107" rms="0.104813"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e000097e.au" len="262144" min="-0.258661" max="0.255779" rms="0.061271"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0000362.au" len="262144" min="-0.268031" max="0.290696" rms="0.071901"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e0000759.au" len="262144" min="-0.208115" max="0.20016" rms="0.042044"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e0000ee3.au" len="262144" min="-0.038737" max="0.034852" rms="0.003469"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e0000cf6.au" len="30464" min="-0.000016" max="0.000017" rms="0.000002"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lost Souls" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="32000" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2651904">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000fb5.au" len="262144" min="-0.056052" max="0.052354" rms="0.011002"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e000077c.au" len="262144" min="-0.12598" max="0.120044" rms="0.026426"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000351.au" len="262144" min="-0.26412" max="0.261006" rms="0.049717"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e00004ad.au" len="262144" min="-0.265512" max="0.27882" rms="0.051122"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000ef0.au" len="262144" min="-0.398107" max="0.317746" rms="0.062103"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e000066d.au" len="262144" min="-0.270723" max="0.247105" rms="0.055966"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e000013a.au" len="262144" min="-0.196039" max="0.183281" rms="0.048418"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e00008c6.au" len="262144" min="-0.216999" max="0.18488" rms="0.043624"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e0000f10.au" len="262144" min="-0.147451" max="0.140328" rms="0.032149"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e0000f14.au" len="262144" min="-0.05013" max="0.053773" rms="0.00458"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e0000159.au" len="30464" min="-0.000021" max="0.000023" rms="0.000003"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
