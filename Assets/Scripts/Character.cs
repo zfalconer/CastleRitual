@@ -17,8 +17,8 @@ public class Character : MonoBehaviour {
     public float runCost = 1.0f;
     public AudioSource walking, running, current;
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
 	}
 	
 	// Update is called once per frame
@@ -29,7 +29,8 @@ public class Character : MonoBehaviour {
             gameObject.GetComponent<Stats>().StaminaUse(runCost);
         }
 	}
-	private void Movement(){
+	private void Movement()
+	{
 		//sprint
 		if (Input.GetKeyDown (KeyCode.LeftShift) && Input.GetAxis("Forward") > 0 && !isSprinting) {
             current = running;
@@ -46,13 +47,20 @@ public class Character : MonoBehaviour {
 			moveDirection = new Vector3(Input.GetAxis("Right"), 0, Input.GetAxis("Forward"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= speed;
-			current.Play ();
+			//current.Play ();
 			//jump
 			if (Input.GetButton("Jump")){
 				moveDirection.y = jumpSpeed;
 			}
 			
 		}
+
+		//quick audio fix for walking
+		if (Input.GetKeyDown (KeyCode.W))
+			walking.Play ();
+		else if (Input.GetKeyUp (KeyCode.W))
+			walking.Stop ();
+		
 		//camera / player rotation
 		transform.Rotate (new Vector3 (0, Input.GetAxis ("MouseX") * cameraXSensitivity * Time.deltaTime, 0));
 		view.transform.Rotate (new Vector3 (-Input.GetAxis ("MouseY") * cameraYSensitivity * Time.deltaTime, 0, 0));

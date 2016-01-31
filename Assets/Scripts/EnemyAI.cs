@@ -53,7 +53,6 @@ public class EnemyAI : MonoBehaviour
 		{
 			if (cycleTime <= (cycleMax * .45f)) 
 			{
-				Debug.Log ("tracking time " + cycleTime);
 				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 			}
 
