@@ -43,16 +43,15 @@ public class EnemyAI : MonoBehaviour
 				else
 					target = GameObject.FindGameObjectWithTag (targetTag);
 			}
-
-			Debug.Log (target.name + "followed by " + this.name);
 		}
 
 
 		//the total cycle of tracking and loitering
-		if (cycleTime >= 0 && cycleTime <= cycleMax)
+		if (cycleTime >= 0 && cycleTime <= cycleMax && target != null)
 		{
 			if (cycleTime <= (cycleMax * .45f)) 
 			{
+				this.GetComponent <Animator> ().SetTrigger ("Walking");
 				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 			}
 
@@ -60,8 +59,11 @@ public class EnemyAI : MonoBehaviour
 		} else
 			cycleTime = 0;
 
-		if (Vector3.Distance (this.transform.position, target.transform.position) < 5)
-			Kill ();
+		if (target != null) 
+		{
+			if (Vector3.Distance (this.transform.position, target.transform.position) < 5)
+				Kill ();
+		}
 	}
 
 	public void Kill ()

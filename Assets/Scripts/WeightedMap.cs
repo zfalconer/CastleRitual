@@ -20,7 +20,6 @@ public class WeightedMap
 		for (int y = 0; y < weights.Length; y++) 
 		{
 			weights [y] = (int)Random.Range (0, 100);
-			Debug.Log (weights[y]);
 		}
 	}
 

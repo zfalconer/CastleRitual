@@ -23,14 +23,19 @@ public class TwinAI : MonoBehaviour
 	{
 		//finds the tags of all the items
 		Debug.Log (itemTag);
-		points = GameObject.FindGameObjectsWithTag (itemTag);
-		map = new WeightedMap (points);
+
 		homePosition = this.transform.position;
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
+		if (map == null) 
+		{
+			points = GameObject.FindGameObjectsWithTag (itemTag);
+			map = new WeightedMap (points);
+		}
+			
 		//if there is no target get one 
 		if (!isReturn && target == null) 
 		{
@@ -42,6 +47,7 @@ public class TwinAI : MonoBehaviour
 		else if (!isReturn)
 		{
 			//find the item
+			this.GetComponent <Animator>().SetTrigger ("Sprinting");
 			this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 
 			//if we are near the item get it
@@ -66,7 +72,7 @@ public class TwinAI : MonoBehaviour
 			isReturn = false;
 
 		//if we are close to the player then 
-		if (Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position) < 6)
+		if (target != null && Vector3.Distance (this.transform.position, GameObject.FindGameObjectWithTag ("Player").transform.position) < 6)
 			this.GetComponent <SpellCaster> ().enabled = true;
 		else
 			this.GetComponent <SpellCaster> ().enabled = false;
