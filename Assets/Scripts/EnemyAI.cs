@@ -28,10 +28,23 @@ public class EnemyAI : MonoBehaviour
 		//if it can't find the tag then it should just target the player
 		if (target == null)
 		{
-			if (GameObject.FindGameObjectWithTag (targetTag) != null)
-				target = GameObject.FindGameObjectWithTag (targetTag);
-			else
-				target = GameObject.FindGameObjectWithTag ("Player");
+			//if tommy spawns then good will attack player and evil will attack target tag
+			if (GameObject.Find ("Timmy(Clone)") != null) 
+			{
+				if (targetTag == "Good")
+					target = GameObject.FindGameObjectWithTag (targetTag);
+				else
+					target = GameObject.FindGameObjectWithTag ("Player");
+			//vice versa for tommy clone
+			} else if (GameObject.Find ("Tommy(Clone)") != null)
+			{
+				if (targetTag == "Good")
+					target = GameObject.FindGameObjectWithTag ("Player");
+				else
+					target = GameObject.FindGameObjectWithTag (targetTag);
+			}
+
+			Debug.Log (target.name + "followed by " + this.name);
 		}
 
 

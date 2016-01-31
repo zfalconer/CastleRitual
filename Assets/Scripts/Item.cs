@@ -20,7 +20,6 @@ public class Item : MonoBehaviour {
     {
 		if((col.gameObject.GetComponent<Stats>().alignment + "Item") == gameObject.tag)
         {
-			col.transform.root.GetComponent <AudioSource> ().gameObject.SetActive (true);
             PickUp(col.gameObject, gameObject);
         }
     }
