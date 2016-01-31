@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
 	// Use this for initialization
 	void Awake () 
 	{
-		target = GameObject.FindGameObjectWithTag (targetTag);
+		cycleMax = 50f;
 	}
 
 	// Update is called once per frame
@@ -27,7 +27,13 @@ public class EnemyAI : MonoBehaviour
 	{
 		//if it can't find the tag then it should just target the player
 		if (target == null)
-			target = GameObject.FindGameObjectWithTag (targetTag);
+		{
+			if (GameObject.FindGameObjectWithTag (targetTag) != null)
+				target = GameObject.FindGameObjectWithTag (targetTag);
+			else
+				target = GameObject.FindGameObjectWithTag ("Player");
+		}
+
 
 
 		if (cycleTime >= 0 && cycleTime <= cycleMax) 
@@ -36,7 +42,7 @@ public class EnemyAI : MonoBehaviour
 				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
 		}
 
-		if (Vector3.Distance (this.transform.position, target.transform.position) < 3)
+		if (Vector3.Distance (this.transform.position, target.transform.position) < 5)
 			Kill ();
 	}
 
