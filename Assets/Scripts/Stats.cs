@@ -13,6 +13,8 @@ public class Stats : MonoBehaviour {
 	public float maxMana = 100f;
 	public GameObject Character;
     public string spawnerContainer;
+    public GameObject[] items = new GameObject[3] { null, null, null };
+    public string alignment;
 
 	// Use this for initialization
 	void Start () {
@@ -60,6 +62,15 @@ public class Stats : MonoBehaviour {
     public virtual void Death()
     {
         GameObject[] spawners = GameObject.FindGameObjectsWithTag(spawnerContainer);
-        spawners[1].GetComponent<SpawnerScript>().spawned = false;
+        for (int num = 0; num < 3; num++)
+        {
+            if(items[num] != null)
+            {
+                GameObject[] itemSpawnerMessage = GameObject.FindGameObjectsWithTag(items[num].GetComponent<Item>().spawnerContainer);
+                itemSpawnerMessage[0].GetComponent<SpawnerScript>().spawned = false;
+                items[num] = null;
+            }
+        }
+        spawners[0].GetComponent<SpawnerScript>().spawned = false;
     }
 }
