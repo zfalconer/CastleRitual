@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners: []
   spawnerTag: EvilMonsterSpawn
-  spawningItem: {fileID: 182070, guid: 4725a5dd110954c4e88fb325e22b18bf, type: 2}
+  spawningItem: {fileID: 139446, guid: 4725a5dd110954c4e88fb325e22b18bf, type: 2}
   spawned: 0
   spawnTime: 1.5
   timeLeft: 0
