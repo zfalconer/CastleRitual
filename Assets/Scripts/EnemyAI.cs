@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
 	{
 		//if it can't find the tag then it should just target the player
 		if (target == null)
-			target = GameObject.FindGameObjectWithTag ("Player");
+			target = GameObject.FindGameObjectWithTag (targetTag);
 
 
 		if (cycleTime >= 0 && cycleTime <= cycleMax) 

@@ -24,6 +24,7 @@ public class CharacterSelect : MonoBehaviour
 	public void PickGood (GameObject evil)
 	{
 		goodKid = playerController;
+		playerController.GetComponent <PlayerStats> ().alignment = "Good";
 		evilKid = evil;
 	}
 
@@ -31,6 +32,7 @@ public class CharacterSelect : MonoBehaviour
 	public void PickEvil (GameObject good)
 	{
 		goodKid = good;
+		playerController.GetComponent <PlayerStats> ().alignment = "Evil";
 		evilKid = playerController;
 	}
 
