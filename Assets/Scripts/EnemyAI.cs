@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
 	// Use this for initialization
 	void Awake () 
 	{
-		cycleMax = 50f;
+		cycleMax = 25f;
 	}
 
 	// Update is called once per frame
@@ -48,12 +48,18 @@ public class EnemyAI : MonoBehaviour
 		}
 
 
-
-		if (cycleTime >= 0 && cycleTime <= cycleMax) 
+		//the total cycle of tracking and loitering
+		if (cycleTime >= 0 && cycleTime <= cycleMax)
 		{
-			if (cycleTime <= (cycleMax * .65f))
+			if (cycleTime <= (cycleMax * .45f)) 
+			{
+				Debug.Log ("tracking time " + cycleTime);
 				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
-		}
+			}
+
+			cycleTime += Time.fixedDeltaTime;
+		} else
+			cycleTime = 0;
 
 		if (Vector3.Distance (this.transform.position, target.transform.position) < 5)
 			Kill ();

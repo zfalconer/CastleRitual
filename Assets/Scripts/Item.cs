@@ -2,7 +2,8 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class Item : MonoBehaviour {
+public class Item : MonoBehaviour 
+{
     public string spawnerContainer;
     public GameObject prefab;
 
@@ -31,12 +32,13 @@ public class Item : MonoBehaviour {
             {
                 pickup.GetComponent<Stats>().items[num] = item.GetComponent<Item>().prefab;
                 Destroy(item);
-                if(num == 3)
-                {
-                    SceneManager.LoadScene("titleScene");
-                }
                 break;
             }
         }
+
+		if(pickup.GetComponent<Stats>().items[2] != null)
+		{
+			SceneManager.LoadScene(0);
+		}
     }
 }
