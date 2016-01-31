@@ -9,10 +9,11 @@ public class CharacterSelect : MonoBehaviour
 	private GameObject evilKid;
 
 	// Use this for initialization
-	void Start () 
+	void OnLevelWasLoaded (int i)
 	{
-		if (goodKid != null && evilKid != null)
+		if (i == 1)
 		{
+			Debug.Log ("Wooo");
 			GameObject.Find ("GoodSpawnerContainer").GetComponent <SpawnerScript> ().spawningItem = goodKid;
 			GameObject.Find ("EvilSpawnerContainer").GetComponent <SpawnerScript> ().spawningItem = evilKid;
 		}
@@ -31,5 +32,13 @@ public class CharacterSelect : MonoBehaviour
 	{
 		goodKid = good;
 		evilKid = playerController;
+	}
+
+	public bool HasPicked ()
+	{
+		if (goodKid != null || evilKid != null)
+			return true;
+
+		return false;
 	}
 }
