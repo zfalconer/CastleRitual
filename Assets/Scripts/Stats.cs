@@ -17,8 +17,12 @@ public class Stats : MonoBehaviour {
     public string alignment;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () 
+	{
+		if (GameObject.FindGameObjectWithTag ("Good"))
+			alignment = "Evil";
+		else
+			alignment = "Good";
 	}
 	
 	// Update is called once per frame

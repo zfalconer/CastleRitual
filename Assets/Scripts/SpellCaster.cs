@@ -77,7 +77,6 @@ public class SpellCaster : MonoBehaviour
 			stats.SpellCast (20);
 			GameObject bulletClone = (GameObject)Instantiate (bolt1, barrel.transform.position, barrel.transform.rotation);
 			bulletClone.GetComponent<Rigidbody> ().velocity = barrel.transform.forward * speed;
-			Debug.Log ("spell 1");
 			spellTimer += spellDelay1;
 		}
 
@@ -92,7 +91,6 @@ public class SpellCaster : MonoBehaviour
 			gameObject.GetComponent <Stats> ().SpellCast (35);
 			GameObject bulletClone = (GameObject)Instantiate (bolt1, barrel.transform.position, barrel.transform.rotation);
 			bulletClone.GetComponent<Rigidbody> ().velocity = barrel.transform.forward * speed;
-			Debug.Log ("Spell 2");
 			spellTimer += spellDelay2;
 		}
 

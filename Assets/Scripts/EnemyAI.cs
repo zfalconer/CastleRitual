@@ -8,6 +8,7 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour 
 {
 	public string targetTag;
+	public string animName;
 	public float cycleMax;
 
 	private GameObject target;
@@ -19,7 +20,7 @@ public class EnemyAI : MonoBehaviour
 	// Use this for initialization
 	void Awake () 
 	{
-		target = GameObject.FindGameObjectWithTag (targetTag);
+		cycleMax = 25f;
 	}
 
 	// Update is called once per frame
@@ -27,17 +28,43 @@ public class EnemyAI : MonoBehaviour
 	{
 		//if it can't find the tag then it should just target the player
 		if (target == null)
-			target = GameObject.FindGameObjectWithTag ("Player");
-
-
-		if (cycleTime >= 0 && cycleTime <= cycleMax) 
 		{
-			if (cycleTime <= (cycleMax * .65f))
-				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
+			//if tommy spawns then good will attack player and evil will attack target tag
+			if (GameObject.Find ("Timmy(Clone)") != null) 
+			{
+				if (targetTag == "Good")
+					target = GameObject.FindGameObjectWithTag (targetTag);
+				else
+					target = GameObject.FindGameObjectWithTag ("Player");
+			//vice versa for tommy clone
+			} else if (GameObject.Find ("Tommy(Clone)") != null)
+			{
+				if (targetTag == "Good")
+					target = GameObject.FindGameObjectWithTag ("Player");
+				else
+					target = GameObject.FindGameObjectWithTag (targetTag);
+			}
 		}
 
-		if (Vector3.Distance (this.transform.position, target.transform.position) < 3)
-			Kill ();
+
+		//the total cycle of tracking and loitering
+		if (cycleTime >= 0 && cycleTime <= cycleMax && target != null)
+		{
+			if (cycleTime <= (cycleMax * .45f)) 
+			{
+				this.GetComponent <Animation> ().Play (animName);
+				this.GetComponent <NavMeshAgent> ().destination = target.transform.position;
+			}
+
+			cycleTime += Time.fixedDeltaTime;
+		} else
+			cycleTime = 0;
+
+		if (target != null) 
+		{
+			if (Vector3.Distance (this.transform.position, target.transform.position) < 3)
+				Kill ();
+		}
 	}
 
 	public void Kill ()
